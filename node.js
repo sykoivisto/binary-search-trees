@@ -4,9 +4,24 @@ const Node = (inData, inLeft, inRight) => {
   let right = inRight; // the right children
 
   return {
-    data,
-    left,
-    right,
+    get data() {
+      return data;
+    },
+    get left() {
+      return left;
+    },
+    get right() {
+      return right;
+    },
+    set data(input) {
+      return (data = input);
+    },
+    set left(input) {
+      return (left = input);
+    },
+    set right(input) {
+      return (right = input);
+    },
   };
 };
 export default Node;
